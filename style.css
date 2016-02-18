@@ -1,35 +1,32 @@
-header.fantasy {
-    height: "10%";
+header {
+    height: 70px;
     text-align: center;
     text-decoration-style: double;
     font-family: fantasy;
-    background-color: bisque;
-    padding-top: 10;
+    background-color: whitesmoke;
+    padding-bottom: 4px;
+    padding-top: 12px;
     
 }
-main.frame1{
+nav {
+    word-spacing: 30px;
+    background-color: lightgrey;
+}
+main {
     text-align: center;
     pading: 40px 40px;
 }
 
-article.frame2{
-    background-color: aquamarine;
-    font-family: fantasy;
+article {
+    background-color: whitesmoke;
+    font-family: sans-serif;
+    line-height: 30px;
+    word-spacing: 2px;
+    
     
 }
 
-aside.frame4{
-    
-}
-
-section.frame5{
-    
-}
-
-aside.frame6{
-    
-}
-footer.frame7{
-    background-color: chartreuse;
+footer{
+    background-color: lightgrey;
     font-family: cursive;
 }
