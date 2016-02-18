@@ -1,1 +1,35 @@
-#pagewidth:
+header.fantasy {
+    height: "10%";
+    text-align: center;
+    text-decoration-style: double;
+    font-family: fantasy;
+    background-color: bisque;
+    padding-top: 10;
+    
+}
+main.frame1{
+    text-align: center;
+    pading: 40px 40px;
+}
+
+article.frame2{
+    background-color: aquamarine;
+    font-family: fantasy;
+    
+}
+
+aside.frame4{
+    
+}
+
+section.frame5{
+    
+}
+
+aside.frame6{
+    
+}
+footer.frame7{
+    background-color: chartreuse;
+    font-family: cursive;
+}
