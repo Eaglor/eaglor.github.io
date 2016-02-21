@@ -1,43 +1,63 @@
-header {
-    border: 1px solid black;
-    outline-style: groove;
-    height: 70px;
-    text-align: center;
-    text-decoration-style: double;
-    font-family: fantasy;
-    background-color: whitesmoke;
-    padding-bottom: 4px;
-    padding-top: 12px;
-    
+header h1 {
+	text-align: center;
+	font-size: 4em;
+	font-family: 'Georgia','Times New Roman','Times','serif' !important;
 }
-nav {
-    text-align: center;
-    max-height: 30px;
-    min-height: 25px;
-    word-spacing: 30px;
-    background-color: lightgrey;
-    margin-top: 2px;
-}
-main {
-    padding: 20px 20px;
+
+header h1 span {
+	color: #fff;
+	background-color: #660033;
 }
 
 article {
-    text-align: left
-    padding: inherit;
-    background-color: whitesmoke;
-    font-family: sans-serif;
-    line-height: auto;
-    word-spacing: auto;
+	font-family: "Helvetica Neue",'Helvetica','sans-serif';
 }
-p {
-    padding: 2 4 2 4;
+
+#main-wrapper {
+	width: 640px;
+	margin: 0 auto;
 }
-footer{
-    background-color: lightgrey;
-    font-family: cursive;
+
+nav ul {
+	text-align: center;
+	margin: 0;
+	padding: 0 0 20px;
 }
-img{
-    float: right;
-    margin:inherit;
+
+nav li {
+	color: #fff;
+	background-color: #999999;
+	padding: 10px 15px;
+	display: inline-block;
+	width: 30%;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+}
+
+nav a {
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: none;
+}
+
+address,figure {
+	text-align: center;
+	font-size: 0.8em;
+}
+
+address {
+	color: #999999;
+	padding-top: 2em;
+	font-style: normal;
+}
+
+footer {
+	border-top: solid #999999 1px;
+	margin-top: 1.2em;
+}
+
+.selected {
+	background-color: #660033;
 }
