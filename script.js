@@ -25,6 +25,7 @@ $(document).ready(function() {
         $("main").load($(this).find("a").attr("href") + " article");
  
     });
+    
 
     init();
  
