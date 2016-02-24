@@ -61,3 +61,32 @@ footer {
 .selected {
 	background-color: #660033;
 }
+#rating {
+	margin: 2em auto;
+}
+#rating-bottom {
+	margin: 0.5em 0 0;
+	text-align: center;
+	color: #999999;
+	font-size: 24pt;
+}
+
+.img-person {
+  background: url("../img/person.svg");
+	height: 24px;
+	width: 24px;
+	display: inline-flex;
+}
+
+
+.img-star {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 24px;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+  height: 24px;
+	width: 24px;
+  background: url("../img/stars-black.svg");
+  background-position: -24px 0;
+	display: inline-flex;
+}

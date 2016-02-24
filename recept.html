@@ -12,18 +12,18 @@
             <h3>Detta behöver du!</h3>
             <h4>Bottnar</h4>
             <ul type="square">
-                <li>190gr - Mandelmassa</li>
-                <li>6st - Ägg</li>
-                <li>3dl - Strösocker</li>
-                <li>3msk - Mandelspån</li>
+                <li><span data-unit="190">190</span>gr - Mandelmassa</li>
+                <li><span data-unit="6">6</span>st - Ägg</li>
+                <li><span data-unit="3">3</span>dl - Strösocker</li>
+                <li><span data-unit="3">3</span>msk - Mandelspån</li>
             </ul>
             <h4>Fyllnadskräm</h4>
             <ul type="square">
-                <li>100gr - Smör</li>
-                <li>1dl - Florsocker</li>
-                <li>1st - Ägg</li>
-                <li>1/2dl - Päroncognac(mitt recept)</li>
-                <li>50gr - Bär/Frukt (om du vill ersätta cognac)</li>
+                <li><span data-unit="100">100</span>gr - Smör</li>
+                <li><span data-unit="1">1</span>dl - Florsocker</li>
+                <li><span data-unit="1">1</span>st - Ägg</li>
+                <li><span data-unit="0.5">0.5</span>dl - Päroncognac(mitt recept)</li>
+                <li><span data-unit="50">50</span>gr - Bär/Frukt (om du vill ersätta cognac)</li>
             </ul>
             <h4>Garnityr</h4>
             <ul type="square">
@@ -32,6 +32,10 @@
                 <li>Chokladflarn</li>
                 <li>Citronmeliss</li>
             </ul>
+            <div>
+            <p><span id="portion">1</span>&nbsp;portioner</p>
+              <input id="portion-slider" type="range" min="1" max="12" step="2" value="4" oninput="updatePortion(value)"/>
+            </div>
         </section>    
         <section>
             <h3>Hur du bakar din egen fragilité.</h3>
@@ -52,12 +56,9 @@
             </ol>
             <p>Smaka å njut!</p>
         </section>
-        <aside><input type="range" min="2" max="12" value="4" step="2" onchange="showValue(this.value)"/><span id="range">4</span><script type="text/javascript">
-            function showValue(newValue){
-                document.getElementById("range").innerHTML=newValue;
-            }</script></aside>
     </article>
     <a href="index.html">Hem</a>
     </div>
 </body>
 </html>
+<span data-unit=""></span>
