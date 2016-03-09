@@ -1,5 +1,7 @@
-var _ratings_ = [];
-var _myRating_ = null;
+var _myRating_ = {};
+
+var api_key = "46a833761e132cb1";
+var recipe = "fragilit%C3%A9";
 
 $(document).ready(function() {
 
@@ -24,7 +26,7 @@ $(document).ready(function() {
  		$(this).addClass("selected");
       $("#content").load($(this).find("a").attr("href") + " article");
     });
-
+   
     init();
 
 });
@@ -37,24 +39,26 @@ function init() {
 }
 
 function updateRating() {
-  var nrOfRatings = _ratings_.length;
+  
+  $.get("https://edu.oscarb.se/sjk15/api/recipe/?api_key="+api_key+"&recipe="+recipe, function(data) {
 
-  if (_ratings_ != null && _ratings_.length > 0) {
-    var sum =  _ratings_.reduce(function(pv, cv) { return pv + cv; }, 0);
-    //var res = Math.round((sum / nrOfRatings) * 10) / 10;
-    //var res = Math.round(sum / nrOfRatings);
-    _myRating_.setRating(Math.round(sum / nrOfRatings) ,false);
-    $("#var-star").text(Math.round((sum / nrOfRatings) * 10) / 10);
-    $("#var-person").text(nrOfRatings);
-  } else {
-    $("#var-star").text(0);
-    $("#var-person").text(0);
-  }
+    $("#var-star").text((data.rating * 10) / 10);
+    $("#var-person").text(data.votes);
+
+  });
+
 }
 
 function addRating(rating) {
-  _ratings_[_ratings_.length] = rating;
-  updateRating();
+
+  $.get("https://edu.oscarb.se/sjk15/api/recipe/?api_key="+api_key+"&recipe="+recipe+"&rating="+rating, function(data) {
+
+    if (data.status === "ok") {
+      updateRating();
+    }
+
+  });
+
 }
 
 function addRatingWidget() {
